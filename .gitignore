@@ -44,3 +44,7 @@ bin/
 ### Mac OS ###
 .DS_Store
 .idea
+
+### Credentials ###
+config.properties
+.gcal-mcp-credentials.properties

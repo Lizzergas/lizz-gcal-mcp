@@ -14,6 +14,17 @@ fun main() {
 }
 
 fun `run mcp server`() {
+    // Initialize Google Calendar authentication early
+    System.err.println("Initializing Google Calendar authentication...")
+    try {
+        val httpTransport = com.google.api.client.googleapis.javanet.GoogleNetHttpTransport.newTrustedTransport()
+        GoogleAuthService.getCredential(httpTransport)
+        System.err.println("Google Calendar authentication initialized successfully")
+    } catch (e: Exception) {
+        System.err.println("Warning: Failed to initialize Google Calendar authentication: ${e.message}")
+        System.err.println("The server will still start, but calendar operations may fail.")
+    }
+    
     val server = Server(
         serverInfo = Implementation(
             name = "Lizz Gcal MCP",
@@ -32,6 +43,7 @@ fun `run mcp server`() {
     // Register tools
     TestTool().register(server)
     GetEventsTool().register(server)
+    CreateEventTool().register(server)
 
     runBlocking {
         server.connect(transport)

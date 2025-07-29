@@ -6,7 +6,9 @@ slf4jVersion = "2.0.9"
 ktorVersion = "3.2.2"
 sqliteVersion = "3.46.1.3"
 exposedVersion = "1.0.0-beta-4"
-google-client-api = "1.39.0"
+google-api-client = "2.7.2"
+google-oauth-client = "1.36.0"
+google-api-services-calendar = "v3-rev20250404-2.0.0"
 
 [libraries]
 junit-bom = { group = "org.junit", name = "junit-bom", version.ref = "junit" }
@@ -20,7 +22,10 @@ sqlite-jdbc = { group = "org.xerial", name = "sqlite-jdbc", version.ref = "sqlit
 exposed-core = { group = "org.jetbrains.exposed", name = "exposed-core", version.ref = "exposedVersion" }
 exposed-jdbc = { group = "org.jetbrains.exposed", name = "exposed-jdbc", version.ref = "exposedVersion" }
 exposed-java-time = { group = "org.jetbrains.exposed", name = "exposed-java-time", version.ref = "exposedVersion" }
-google-client-api = { group = "com.google.http-client", name = "google-http-client", version.ref = "google-client-api" }
+google-api-client = { group = "com.google.api-client", name = "google-api-client", version.ref = "google-api-client" }
+google-oauth-client-jetty = { group = "com.google.oauth-client", name = "google-oauth-client-jetty", version.ref = "google-oauth-client" }
+google-api-services-calendar = { group = "com.google.apis", name = "google-api-services-calendar", version.ref = "google-api-services-calendar" }
+google-http-client-jackson2 = { group = "com.google.http-client", name = "google-http-client-jackson2", version = "1.45.3" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

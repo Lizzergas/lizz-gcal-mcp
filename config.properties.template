@@ -1,0 +1,11 @@
+# Google Calendar OAuth2 Configuration
+# Copy this file to config.properties and fill in your actual values
+
+# OAuth2 Client ID from Google Cloud Console
+google.oauth.client.id=YOUR_CLIENT_ID
+
+# OAuth2 Client Secret from Google Cloud Console  
+google.oauth.client.secret=YOUR_CLIENT_SECRET
+
+# Optional: Application name (defaults to "Lizz GCal MCP")
+google.application.name=Lizz GCal MCP

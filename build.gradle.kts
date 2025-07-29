@@ -10,6 +10,7 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    google()
 }
 
 dependencies {
@@ -22,7 +23,12 @@ dependencies {
     implementation(libs.exposed.core)
     implementation(libs.exposed.jdbc)
     implementation(libs.exposed.java.time)
-    implementation(libs.google.client.api)
+    implementation(libs.google.api.client)
+    implementation(libs.google.oauth.client.jetty)
+    implementation(libs.google.api.services.calendar)
+    implementation(libs.google.http.client.jackson2)
+    implementation("com.google.oauth-client:google-oauth-client-java6:1.36.0")
+    implementation("com.google.oauth-client:google-oauth-client-jetty:1.36.0")
 }
 
 tasks.test {
