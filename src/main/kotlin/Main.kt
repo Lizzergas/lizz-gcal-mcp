@@ -31,6 +31,7 @@ fun `run mcp server`() {
 
     // Register tools
     TestTool().register(server)
+    GetEventsTool().register(server)
 
     runBlocking {
         server.connect(transport)

@@ -22,6 +22,7 @@ dependencies {
     implementation(libs.exposed.core)
     implementation(libs.exposed.jdbc)
     implementation(libs.exposed.java.time)
+    implementation(libs.google.client.api)
 }
 
 tasks.test {
